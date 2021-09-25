@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "addform_answer";
+}
+
+<h1>addform_answer</h1>
+
+
+<form method="post" action="/QandA/addanswer">
+    <input type="hidden" name="questionID" value="@ViewBag.questid" />
+
+    Username: <input type="text" name="username" /><br />
+    Detail: <input type="text" name="detail" /><br />
+    Posted: <input type="datetime" name="posted" /><br />
+    Upvotes: <input type="number" name="upvotes" /><br />
+    <input type="submit" value="save" />
+</form>
+

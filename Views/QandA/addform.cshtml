@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "addform";
+}
+
+<h1>Add Question</h1>
+
+<form method="post" action="/QandA/addquest">
+    Username: <input type="text" name="username" /><br />
+    Title: <input type="text" name="title" /><br />
+    Detail: <input type="text" name="detail" /><br />
+    Posted: <input type="datetime" name="posted" /><br />
+    Category: <input type="text" name="category" /><br />
+    Tags: <input type="text" name="tags" /><br />
+    Status: <input type="number" name="status" /><br />
+    <input type="submit" value="save" />
+</form>

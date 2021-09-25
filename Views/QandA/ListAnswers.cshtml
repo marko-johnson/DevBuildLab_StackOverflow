@@ -1,0 +1,17 @@
+﻿@model QuestionAnswers
+@{
+    ViewData["Title"] = "ListAnswers";
+}
+
+<h1>@Model.quest.detail</h1>
+<h2></h2>
+<div>
+    <b>Answers: </b>
+    @foreach (Answers answer in Model.answer)
+    {
+        <div>@answer.detail</div>
+    }
+
+</div>
+
+<a href="/QandA/addform_answer?questid=@Model.quest.id" class="btn btn-secondary">Add Answer</a>

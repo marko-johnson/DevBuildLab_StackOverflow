@@ -1,0 +1,25 @@
+﻿@model List<Questions>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Questions</h1>
+
+@foreach (Questions quest in Model)
+{
+    <!--<div><a href="/QandA/Questions?quest=@quest.detail">@quest.id</a></div>-->
+<div>
+    <a href="/QandA/Questions?quest=@quest.id">@quest.detail </a>
+    <a href="/QandA/editform?questid=@quest.id" class="btn btn-primary">Edit</a>
+    <a href="/QandA/delete?id=@quest.id" class="btn btn-danger">Delete</a>
+    <a href="/QandA/ListAnswers?questid=@quest.id" class="btn btn-primary">Answer</a>
+</div>
+
+
+}
+
+<a href="/QandA/addform" class="btn btn-primary">Add Question</a>
+
+
+
+
